@@ -16,7 +16,7 @@ void *producerFunc(void *arg)
     for(int i = 0; i < argValue; i++)
     {
         sem_wait(&flag);
-        //printf("Producer waiting for lock\n");
+        printf("Producer waiting for lock\n");
         pthread_mutex_lock(&mtx);
         avail++;
         printf("Producer:%d\n", avail);
