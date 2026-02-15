@@ -13,7 +13,7 @@
     fd = open("../pipe",O_RDONLY);
     assert(fd >= 0);
     printf("Process is waiting for the data...\n");
-    
+
     int n = read(fd, buffer,10);
 
     printf("The number of bytes write was %d\n",n);
@@ -25,6 +25,8 @@
       // }
       
    printf("%s\n", buffer);
+
+   close(fd);
 
       
 

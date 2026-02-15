@@ -33,6 +33,8 @@
         printf("Write failed\n");
     }
 
+    close(fd);
+
     
 
     
